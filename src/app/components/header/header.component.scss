@@ -1,0 +1,58 @@
+@use "../../../styles/variables.scss";
+
+header {
+    background-color: variables.$white-color;
+    height: 56px;
+    align-content: center;
+    box-shadow: 0 0 11px 4px variables.$light-gray-color;
+}
+
+h1 {
+    font-size: 17px;
+    font-weight: 400;
+    padding-bottom: 3px;
+    margin-top: -2px;
+}
+
+i {
+    font-size: .8rem;
+    font-weight: 300;
+    color: variables.$dark-gray-color;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+}
+
+.lineSubtitle {
+    width: 2px;
+    color: 1px solid variables.$black-color;
+}
+
+.infosHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 3px;
+    padding-left: 5px;
+}
+
+.contentSubtitle {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+
+    div {
+        height: 1px;
+        background-color: variables.$dark-gray-color;
+    }
+
+    .lineSubtitleLeft {
+        width: 10px;
+    }
+
+    .lineSubtitleRight {
+        width: 40px;
+    }
+}

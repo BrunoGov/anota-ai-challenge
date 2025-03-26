@@ -1,0 +1,27 @@
+<app-header></app-header>
+<main>
+    <section>
+        <div class="contentSectionInput">
+            <input type="text" (keyup)="searchProducts($event)" />
+        </div>
+    </section>
+    <section class="contentSectionList">
+        @if(products.length > 0) {
+            @for(product of productsFiltered; track product.id; let i = $index) {
+                <app-cards
+                    index={{i}}
+                    title={{product.title}}
+                    image={{product.img}}
+                    description={{product.description}}
+                    type={{product.type}}
+                    (removeProduct)="removeProduct($event)"
+                ></app-cards>
+            }
+        }
+    </section>
+    @if(messageError) {
+        <section>
+            <p class="messageError">Ops, não foi possível carregar as informações,<br/>por favor tente novamente mais tarde.</p>
+        </section>   
+    }
+</main>

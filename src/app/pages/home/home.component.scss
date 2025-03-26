@@ -1,0 +1,35 @@
+@use "../../../styles/variables.scss";
+
+.contentSectionInput {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+    align-items: center;
+}
+
+input {
+    background-image: url('/assets/icons/search.png');
+    background-repeat: no-repeat;
+    background-position: calc(100% - 10px) center;
+    padding-right: 30px !important;
+    padding: 10px;
+    border: 1px solid variables.$gray-color;
+    border-radius: 5px;
+    width: 48%;
+}
+
+input:focus {
+    border: 1px solid variables.$primary-color;
+}
+
+.contentSectionList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(205px, 205px));
+    justify-content: center;
+    gap: 30px;
+    padding: 0 30px;
+}
+
+.messageError {
+    text-align: center;
+}
